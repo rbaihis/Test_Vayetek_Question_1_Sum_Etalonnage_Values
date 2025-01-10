@@ -92,6 +92,7 @@ Considérez l'ensemble de votre document d'étalonnage à la fin de ce document.
 ## Java Implementation:
 
 ```java
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -99,6 +100,7 @@ import java.util.logging.Logger;
 
 public class Main {
     private static final Logger log = Logger.getLogger(Main.class.getName());
+
     private static int getEtalonnageValue(String line, StringBuilder digitsHolder){
 
         digitsHolder.setLength(0);
@@ -116,6 +118,7 @@ public class Main {
         return firstDigit*10 + lastDigit;
     }
     
+    
     public static void main(String[] args) throws IOException {
 
         String filePath = "resources/document.txt";
@@ -123,15 +126,17 @@ public class Main {
 
             StringBuilder reusableDigitHolder = new StringBuilder();
             int sum = br.lines()
-                    .mapToInt( l-> getEtalonnageValue(l,reusableDigitHolder))
+                    .mapToInt( line-> getEtalonnageValue(line,reusableDigitHolder))
                     .sum();
-            System.out.println("Sum : "+sum);
+
+            System.out.println("\n\nSum : "+sum);
 
         }catch (IOException e){
             log.warning("Error occurred when manipulating file : "+e.getMessage());
             throw new IOException(e.getCause());
         }
     }
+    
 }
 ```
 ---
