@@ -1,7 +1,5 @@
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.logging.Logger;
 
 public class Main {
@@ -35,11 +33,13 @@ public class Main {
                     .mapToInt( line-> getEtalonnageValue(line,reusableDigitHolder))
                     .sum();
 
-            System.out.println("\n\nSum : "+sum);
+            log.info(() -> String.format("Sum = %d", sum));
 
-        }catch (IOException e){
-            log.warning("Error occurred when manipulating file : "+e.getMessage());
-            throw new IOException(e.getCause());
+        }catch (FileNotFoundException e){
+            throw new FileNotFoundException("Error occurred while Opening File resources/document.txt");
+
+        }catch (UncheckedIOException e){
+            throw new UncheckedIOException("Error occurred while reading file lines", e.getCause());
         }
     }
 
