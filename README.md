@@ -5,13 +5,12 @@
 - **IDE Used**: `IntelliJ IDEA Community Edition`  V2023.1.2
 - **Project Structure**:
   - ```
-    Test_Vayetek/
-├── src/
-│   └── Main.class        # Solution code
-├── resources/
-│   └── document.txt      # Input data file
-└── README.md             # Documentation
-
+    Test_Vayetek_Question_1_Sum_Etalonnage_Values/
+    ├── src/
+    │   └── Main.class        # Solution code
+    ├── resources/
+    │   └── document.txt      # Input data file
+    └── README.md             # Documentation
     ``` 
 
 ## Problem Solving Question & What are 'étalonnage values'?
