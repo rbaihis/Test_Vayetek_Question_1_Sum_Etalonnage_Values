@@ -9,7 +9,7 @@
     ├── src/
     │   └── Main.class        # Solution code
     ├── resources/
-    │   └── document.txt      # Input data file
+    │   └── document.txt      # Input data file (Contains lines of text with potential 'étalonnage values')
     └── README.md             # Documentation
     ``` 
 
