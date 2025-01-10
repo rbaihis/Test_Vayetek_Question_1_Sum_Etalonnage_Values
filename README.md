@@ -4,15 +4,13 @@
 - **Technology Used**: `Java` with `JDK 17`
 - **IDE Used**: `IntelliJ IDEA Community Edition`  V2023.1.2
 
-## Question and What are 'étalonnage values'?
+## Problem Solving Question & What are 'étalonnage values'?
 
 The "étalonnage value" is calculated by combining the first and last digits of each line (if present) to form a two-digit integer.
 
 - **Test Question**:
 
 ```bash
-Problem Solving Question
-
 Question 1
 Le document d'étalonnage nouvellement amélioré se compose de lignes de texte ; chaque
 ligne contient initialement une valeur d'étalonnage spécifique que les lutins doivent
