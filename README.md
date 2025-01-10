@@ -3,12 +3,22 @@
 - **Technical assessment**: `sum of étalonnage values` from a text file.
 - **Technology Used**: `Java` with `JDK 17`
 - **IDE Used**: `IntelliJ IDEA Community Edition`  V2023.1.2
+- **Project Structure**:
+  - ```
+    Test_Vayetek/
+├── src/
+│   └── Main.class        # Solution code
+├── resources/
+│   └── document.txt      # Input data file
+└── README.md             # Documentation
+
+    ``` 
 
 ## Problem Solving Question & What are 'étalonnage values'?
 
 The "étalonnage value" is calculated by combining the first and last digits of each line (if present) to form a two-digit integer.
 
-```bash
+```text
 Question 1
 
 Le document d'étalonnage nouvellement amélioré se compose de lignes de texte ; chaque
