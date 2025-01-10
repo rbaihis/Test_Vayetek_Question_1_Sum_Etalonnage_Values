@@ -8,10 +8,9 @@
 
 The "étalonnage value" is calculated by combining the first and last digits of each line (if present) to form a two-digit integer.
 
-- **Test Question**:
-
 ```bash
 Question 1
+
 Le document d'étalonnage nouvellement amélioré se compose de lignes de texte ; chaque
 ligne contient initialement une valeur d'étalonnage spécifique que les lutins doivent
 maintenant récupérer. Sur chaque ligne, la valeur d'étalonnage peut être trouvée en
