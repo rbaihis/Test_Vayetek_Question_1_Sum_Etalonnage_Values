@@ -76,7 +76,7 @@ Considérez l'ensemble de votre document d'étalonnage à la fin de ce document.
 >>
 >> **Readability**: Simplifies digit extraction compared to a `char`-based approach, avoiding complex `if` conditions.
 
-- **`firstDigit*10 + lastigit` instead of `char concatenation to String` approach?**
+- **`firstDigit*10 + lastDigit` instead of `char concatenation to String` approach?**
 >> **Efficiency**: Avoids the overhead of concatenating characters into a string and then converting the string to an integer. This reduces memory usage and garbage collection overhead.
 
 - **`functional programming` instead of loops?**
@@ -90,9 +90,8 @@ Considérez l'ensemble de votre document d'étalonnage à la fin de ce document.
 
 ```java
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+
+import java.io.*;
 import java.util.logging.Logger;
 
 public class Main {
@@ -114,8 +113,8 @@ public class Main {
 
         return firstDigit*10 + lastDigit;
     }
-    
-    
+
+
     public static void main(String[] args) throws IOException {
 
         String filePath = "resources/document.txt";
@@ -126,15 +125,18 @@ public class Main {
                     .mapToInt( line-> getEtalonnageValue(line,reusableDigitHolder))
                     .sum();
 
-            System.out.println("\n\nSum : "+sum);
+            log.info(() -> String.format("Sum = %d", sum));
 
-        }catch (IOException e){
-            log.warning("Error occurred when manipulating file : "+e.getMessage());
-            throw new IOException(e.getCause());
+        }catch (FileNotFoundException e){
+            throw new FileNotFoundException("Error occurred while Opening File resources/document.txt");
+
+        }catch (UncheckedIOException e){
+            throw new UncheckedIOException("Error occurred while reading file lines", e.getCause());
         }
     }
-    
+
 }
+
 ```
 
 ### Solution Output 
