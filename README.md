@@ -35,7 +35,7 @@ Considérez l'ensemble de votre document d'étalonnage à la fin de ce document.
 
 ## Data (Input/Output):
 
-- **Input Type**: `file: src/resources/document.txt` Contains lines of text with potential numeric values.
+- **Input Type**: `file: resources/document.txt` Contains lines of text with potential numeric values.
 - **Output Required**: The **sum** of all "étalonnage values" found in the document.
 
 ---
@@ -118,7 +118,7 @@ public class Main {
     
     public static void main(String[] args) throws IOException {
 
-        String filePath = "src/resources/document.txt";
+        String filePath = "resources/document.txt";
         try(BufferedReader br = new BufferedReader(new FileReader(filePath))){
 
             StringBuilder reusableDigitHolder = new StringBuilder();
@@ -136,7 +136,7 @@ public class Main {
 ```
 ---
 
-## Eétalonnage Document Data:
+## Eétalonnage Document Data `resources/document.txt`:
 
 ```text
 ckmb52fldxkseven3fkjgcbzmnr7
