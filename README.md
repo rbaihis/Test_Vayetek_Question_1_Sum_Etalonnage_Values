@@ -1,0 +1,1 @@
+# Test_Vayetek_Question_1_Sum_Etalonnage_Values
