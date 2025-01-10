@@ -136,6 +136,17 @@ public class Main {
     
 }
 ```
+
+### Solution Output 
+```bash
+"C:\Program Files\Java\jdk-17\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2023.3.2\lib\idea_rt.jar=5292:C:\Program Files\JetBrains\IntelliJ IDEA 2023.3.2\bin" -Dfile.encoding=UTF-8 -classpath C:\Users\rbaih\OneDrive\Documents\cvs\Technical_tests\Vayetek\Test_Vayetek_Question_1_Sum_Etalonnage_Values\out\production\Test_Vayetek_Question_1_Sum_Etalonnage_Values Main
+
+
+Sum : 53386
+
+Process finished with exit code 0
+```
+
 ---
 
 ## Eétalonnage Document Data `resources/document.txt`:
